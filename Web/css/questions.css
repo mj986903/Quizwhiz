@@ -1,0 +1,81 @@
+/* Filter and Add Button */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filter-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#filter-category {
+    width: 250px;
+}
+
+/* Questions List */
+#questions-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Single Question Item */
+.question-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.question-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.question-preview {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* Question Details */
+.question-details {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show details when toggled */
+.question-details:not(.hidden) {
+    display: block;
+}
+
+.question-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.question-details li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    color: white;
+}
+
+.correct-answer {
+    font-weight: bold;
+    color: #00ff00;
+}

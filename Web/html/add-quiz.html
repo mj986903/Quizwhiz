@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Quiz - QuizWhiz</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="icon" type="image/png" href="../images/Quiz_App.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html"><div class="logo"><img src="../images/Quiz_App.png" alt="QuizWhiz Logo">QuizWhiz</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Quizzes</a></li>
+      <li><a href="questions.html" >Questions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Create Quiz -->
+  <div class="container">
+    <h1>Create a New Quiz</h1>
+    <form id="create-quiz-form">
+      <label for="quizTitle">Quiz Title:</label>
+      <input type="text" id="quizTitle" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" required></textarea>
+
+      <label for="category">Category:</label>
+      <input type="text" id="category" required>
+
+      <label for="noOfQuestions">Number of Questions:</label>
+      <input type="number" id="noOfQuestions" required min="1">
+
+      <!-- Button Group -->
+      <div class="button-group">
+        <button type="submit">Create Quiz</button>
+        <button type="button" id="go-back">Go Back</button>
+    </div>
+    </form>
+
+    <p id="message" class="success-message"></p>
+  </div>
+
+  <script>
+    document.getElementById("go-back").addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+  </script>
+  <script src="../js/add-quiz.js"></script>
+</body>
+</html>

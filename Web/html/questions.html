@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions - QuizWhiz</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/questions.css">
+  <link rel="icon" type="image/png" href="../images/Quiz_App.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html"><div class="logo"><img src="../images/Quiz_App.png" alt="QuizWhiz Logo">QuizWhiz</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Quizzes</a></li>
+      <li><a href="questions.html" class="active" >Questions</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Available Questions</h2>
+    <div class="filter-container">
+      <div class="filter-left">
+          <input type="text" id="filter-category" placeholder="Filter by Category">
+          <button id="search-btn">Search</button>
+      </div>
+      <button id="add-question-btn">Add Question</button>
+    </div>
+    <ul id="questions-list"></ul>
+  </div>
+
+  <script src="../js/questions.js"></script>
+</body>
+</html>

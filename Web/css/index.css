@@ -1,0 +1,132 @@
+/* Filter and Add Button */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.filter-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#filter-category {
+    width: 250px;
+}
+
+/* Quiz List - Full Width */
+#quiz-list {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Stack quizzes vertically */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Quiz Card - Left (Info) & Right (Button) */
+.quiz-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row; /* Left to Right Layout */
+    align-items: center;
+    justify-content: space-between; /* Spread content */
+    width: 100%;  /* Full width */
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Left Section: Quiz Details */
+.quiz-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+/* Quiz Title */
+.quiz-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+
+/* Quiz Description */
+.quiz-description {
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+/* Category Tag */
+.quiz-category {
+    font-size: 14px;
+    background: #ffcc00;
+    color: black;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Number of Questions */
+.quiz-questions {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Right Section: Start Quiz Button */
+.quiz-action {
+    flex-shrink: 0;
+}
+
+/* Start Quiz Button */
+.start-quiz {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: #ffcc00;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-quiz:hover {
+    background: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-card {
+        flex-direction: column; /* Stack items for smaller screens */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .quiz-info {
+        align-items: center; /* Center align text */
+    }
+
+    .quiz-action {
+        margin-top: 15px;
+    }
+}

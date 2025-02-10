@@ -1,0 +1,139 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    padding-top: 80px; /* Adjusted for fixed navbar */
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 25px;
+    color:#ffcc00;
+    font-weight: bolder;
+    border-radius: 10%;
+}
+
+.logo img {
+    margin-right: 5px;
+    width: 40px;  /* Adjust size as needed */
+    height: 40px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2)); /* Adds a subtle shadow */
+    color: whitesmoke;
+    background-color: #ffcc00;
+border-radius: 80%;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
